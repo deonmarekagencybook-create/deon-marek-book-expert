@@ -4,27 +4,24 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Deon Marek | Book Marketing Expert</title>
+  <title>Deon Marek | Book Marketing & Publicity</title>
 
   <meta
     name="description"
-    content="Deon Marek helps authors strengthen book visibility, reader discovery, retail positioning, and marketing strategy."
+    content="Deon Marek provides focused book marketing, author visibility, retail optimization, reader discovery, promotional strategy, and publicity support."
   >
 
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@400;500;600&display=swap');
+  <link rel="stylesheet" href="style.css">
 
+  <style>
     :root {
-      --black: #151515;
-      --text: #252321;
-      --muted: #716c65;
-      --cream: #f4f0e9;
-      --light: #ebe5dc;
-      --white: #fffdf9;
-      --line: #d8d1c7;
-      --brown: #8b6c58;
-      --green: #354f47;
-      --max: 1180px;
+      --ink: #121212;
+      --muted: #55504a;
+      --cream: #f5f1e9;
+      --white: #fffdf8;
+      --line: #d8d0c4;
+      --accent: #806b4d;
+      --soft: #ebe4d8;
     }
 
     * {
@@ -38,9 +35,9 @@
     body {
       margin: 0;
       background: var(--cream);
-      color: var(--text);
-      font-family: "DM Sans", Arial, sans-serif;
-      line-height: 1.65;
+      color: var(--ink);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.75;
     }
 
     a {
@@ -53,30 +50,21 @@
       display: block;
     }
 
-    button {
-      font-family: inherit;
-    }
-
-    .container {
-      width: min(var(--max), calc(100% - 48px));
-      margin: 0 auto;
-    }
-
-    /* =========================
-       HEADER
-    ========================= */
+    /* HEADER */
 
     header {
       position: sticky;
       top: 0;
       z-index: 1000;
-      background: rgba(244, 240, 233, .96);
-      backdrop-filter: blur(10px);
+      background: rgba(245, 241, 233, 0.97);
       border-bottom: 1px solid var(--line);
+      backdrop-filter: blur(8px);
     }
 
-    .nav {
-      min-height: 78px;
+    .header-inner {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 18px 28px;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -84,600 +72,496 @@
     }
 
     .brand {
-      font-family: "Playfair Display", Georgia, serif;
-      font-size: 25px;
-      font-weight: 500;
-      letter-spacing: -.5px;
-    }
-
-    .brand small {
       display: block;
-      font-family: "DM Sans", Arial, sans-serif;
-      font-size: 9px;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      color: var(--muted);
-      margin-top: -3px;
+      min-width: 250px;
     }
 
-    .nav-links {
+    .brand-name {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 25px;
+      letter-spacing: 0.02em;
+      line-height: 1.1;
+    }
+
+    .brand-subtitle {
+      display: block;
+      margin-top: 5px;
+      font-size: 10px;
+      letter-spacing: 0.22em;
+      color: #69625a;
+      text-transform: uppercase;
+    }
+
+    nav {
       display: flex;
       align-items: center;
-      gap: 30px;
-      list-style: none;
-      margin: 0;
-      padding: 0;
+      gap: 28px;
+      font-size: 14px;
+    }
+
+    nav a {
+      transition: opacity 0.2s ease;
+    }
+
+    nav a:hover {
+      opacity: 0.55;
+    }
+
+    .nav-button {
+      border: 1px solid var(--ink);
+      padding: 8px 15px;
       font-size: 13px;
-    }
-
-    .nav-links a {
-      transition: .2s ease;
-    }
-
-    .nav-links a:hover {
-      color: var(--brown);
-    }
-
-    .nav-cta {
-      border: 1px solid var(--black);
-      padding: 10px 17px;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      font-size: 11px;
-    }
-
-    .nav-cta:hover {
-      background: var(--black);
-      color: white !important;
     }
 
     .menu-button {
       display: none;
-      border: 0;
       background: transparent;
-      font-size: 26px;
+      border: 1px solid var(--ink);
+      padding: 8px 11px;
       cursor: pointer;
+      font-size: 18px;
     }
 
-    /* =========================
-       HERO
-    ========================= */
+    /* MAIN */
 
-    .hero {
-      padding: 105px 0 100px;
-      border-bottom: 1px solid var(--line);
+    main {
+      overflow: hidden;
     }
 
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1.15fr .85fr;
-      align-items: center;
-      gap: 80px;
+    .article {
+      max-width: 930px;
+      margin: 0 auto;
+      padding: 105px 30px 100px;
     }
 
     .eyebrow {
-      font-size: 11px;
+      font-size: 12px;
+      letter-spacing: 0.22em;
       text-transform: uppercase;
-      letter-spacing: 3px;
-      color: var(--brown);
-      font-weight: 600;
-      margin-bottom: 28px;
+      color: #625b52;
+      margin-bottom: 34px;
+    }
+
+    h1,
+    h2,
+    h3 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-weight: 400;
+      color: var(--ink);
     }
 
     h1 {
-      font-family: "Playfair Display", Georgia, serif;
-      font-size: clamp(58px, 7.5vw, 100px);
-      line-height: .94;
-      font-weight: 400;
-      letter-spacing: -4px;
+      font-size: clamp(44px, 7vw, 76px);
+      line-height: 1.05;
       margin: 0 0 35px;
+      letter-spacing: -0.025em;
     }
 
-    .hero-description {
-      max-width: 650px;
-      font-size: 18px;
-      color: var(--muted);
-      margin-bottom: 35px;
+    h2 {
+      font-size: clamp(34px, 5vw, 48px);
+      line-height: 1.13;
+      margin: 85px 0 28px;
+      letter-spacing: -0.015em;
     }
 
-    .buttons {
-      display: flex;
-      gap: 12px;
-      flex-wrap: wrap;
+    h3 {
+      font-size: 27px;
+      line-height: 1.25;
+      margin: 50px 0 18px;
     }
 
-    .button {
-      display: inline-block;
-      padding: 14px 22px;
-      border: 1px solid var(--black);
-      font-size: 12px;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      transition: .2s ease;
-    }
-
-    .button-dark {
-      background: var(--black);
-      color: white;
-    }
-
-    .button:hover {
-      transform: translateY(-2px);
-    }
-
-    .hero-image {
-      background: var(--light);
-      padding: 40px;
-    }
-
-    .hero-image img {
-      width: 100%;
-      aspect-ratio: 4 / 5;
-      object-fit: cover;
-      object-position: center top;
-    }
-
-    .image-caption {
-      margin-top: 17px;
-      font-size: 11px;
-      text-transform: uppercase;
-      letter-spacing: 1.7px;
-      color: var(--muted);
-    }
-
-    /* =========================
-       GENERAL SECTIONS
-    ========================= */
-
-    section {
-      padding: 105px 0;
-      border-bottom: 1px solid var(--line);
-    }
-
-    .section-label {
-      font-size: 11px;
-      text-transform: uppercase;
-      letter-spacing: 3px;
-      color: var(--brown);
-      font-weight: 600;
-      margin-bottom: 23px;
-    }
-
-    .section-title {
-      font-family: "Playfair Display", Georgia, serif;
-      font-weight: 400;
-      font-size: clamp(43px, 5.5vw, 72px);
-      line-height: 1;
-      letter-spacing: -2.5px;
-      margin: 0 0 30px;
+    p {
+      font-size: 17px;
+      margin: 0 0 25px;
+      color: #38342f;
     }
 
     .lead {
-      max-width: 720px;
-      font-size: 18px;
-      color: var(--muted);
+      font-size: 21px;
+      line-height: 1.65;
+      max-width: 800px;
     }
 
-    /* =========================
-       ABOUT
-    ========================= */
-
-    .about-grid {
-      display: grid;
-      grid-template-columns: .75fr 1.25fr;
-      gap: 90px;
+    strong {
+      color: #171513;
     }
 
-    .about-copy {
-      max-width: 730px;
+    /* INTRO */
+
+    .intro {
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 75px;
     }
 
-    .about-copy p {
-      font-size: 17px;
-      color: #4e4a45;
-      margin-top: 0;
-      margin-bottom: 22px;
+    .intro-line {
+      width: 55px;
+      height: 2px;
+      background: var(--accent);
+      margin: 40px 0;
     }
 
-    .about-highlight {
-      margin-top: 40px;
-      padding: 30px;
-      background: var(--white);
-      border: 1px solid var(--line);
+    /* HIGHLIGHT */
+
+    .highlight {
+      margin: 70px 0;
+      padding: 28px 30px;
+      border-left: 3px solid var(--accent);
+      background: rgba(255, 253, 248, 0.5);
     }
 
-    .about-highlight strong {
-      display: block;
-      font-family: "Playfair Display", Georgia, serif;
+    .highlight p {
+      font-family: Georgia, "Times New Roman", serif;
       font-size: 26px;
+      line-height: 1.45;
+      margin: 0;
+      color: #171513;
+    }
+
+    /* TABLE */
+
+    .table-wrap {
+      width: 100%;
+      overflow-x: auto;
+      margin: 35px 0 50px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 700px;
+      background: rgba(255, 253, 248, 0.45);
+    }
+
+    th,
+    td {
+      border: 1px solid var(--line);
+      padding: 19px 17px;
+      text-align: left;
+      vertical-align: top;
+      font-size: 15px;
+    }
+
+    th {
+      background: var(--soft);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 17px;
       font-weight: 400;
-      margin-bottom: 10px;
     }
 
-    .about-highlight span {
-      color: var(--muted);
-      font-size: 14px;
+    /* LIST */
+
+    ul,
+    ol {
+      padding-left: 28px;
+      margin: 25px 0 35px;
     }
 
-    /* =========================
-       SERVICES
-    ========================= */
-
-    .services-intro {
-      display: grid;
-      grid-template-columns: .75fr 1.25fr;
-      gap: 90px;
-      margin-bottom: 60px;
+    li {
+      margin-bottom: 13px;
+      color: #38342f;
+      font-size: 16px;
     }
+
+    /* NUMBERED CARDS */
+
+    .numbered {
+      margin-top: 35px;
+    }
+
+    .number-item {
+      padding: 30px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .number-item:last-child {
+      border-bottom: 1px solid var(--line);
+    }
+
+    .number {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 20px;
+      color: var(--accent);
+      margin-bottom: 8px;
+    }
+
+    .number-item h3 {
+      margin: 0 0 13px;
+      font-size: 27px;
+    }
+
+    /* SERVICES */
 
     .service-list {
-      border-top: 1px solid var(--line);
+      margin-top: 35px;
     }
 
     .service {
-      display: grid;
-      grid-template-columns: 70px 1fr 30px;
-      gap: 25px;
-      padding: 30px 0;
-      border-bottom: 1px solid var(--line);
-      transition: .25s ease;
-    }
-
-    .service:hover {
-      padding-left: 10px;
-    }
-
-    .service-number {
-      color: var(--brown);
-      font-size: 11px;
-      letter-spacing: 2px;
-      font-weight: 600;
-    }
-
-    .service h3 {
-      font-family: "Playfair Display", Georgia, serif;
-      font-size: 29px;
-      font-weight: 400;
-      margin: 0 0 7px;
-    }
-
-    .service p {
-      max-width: 760px;
-      margin: 0;
-      color: var(--muted);
-      font-size: 14px;
-    }
-
-    .service-arrow {
-      font-size: 20px;
-      color: var(--brown);
-    }
-
-    /* =========================
-       MARKETING ADVICE
-    ========================= */
-
-    .advice {
-      background: var(--light);
-    }
-
-    .advice-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 80px;
-      align-items: center;
-    }
-
-    .advice-box {
-      border-left: 2px solid var(--brown);
-      padding-left: 30px;
-    }
-
-    .advice-box p {
-      color: var(--muted);
-      font-size: 17px;
-    }
-
-    .advice-list {
+      padding: 28px 0;
       border-top: 1px solid var(--line);
     }
 
-    .advice-item {
-      padding: 19px 0;
+    .service:last-child {
       border-bottom: 1px solid var(--line);
-      display: flex;
-      justify-content: space-between;
-      gap: 20px;
     }
 
-    .advice-item span {
-      color: var(--brown);
+    .service-number {
+      font-size: 12px;
+      letter-spacing: 0.16em;
+      color: var(--accent);
+      margin-bottom: 7px;
     }
 
-    /* =========================
-       PROCESS
-    ========================= */
+    .service h3 {
+      margin: 0 0 10px;
+    }
 
-    .process-grid {
+    .service p {
+      margin-bottom: 0;
+    }
+
+    /* PROCESS */
+
+    .process {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 25px;
-      margin-top: 60px;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1px;
+      background: var(--line);
+      border: 1px solid var(--line);
+      margin-top: 35px;
     }
 
-    .process-card {
-      border-top: 1px solid var(--black);
-      padding-top: 20px;
+    .process-item {
+      background: var(--cream);
+      padding: 32px;
     }
 
     .process-number {
-      font-size: 11px;
-      color: var(--brown);
-      letter-spacing: 2px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 30px;
+      color: var(--accent);
+      margin-bottom: 15px;
     }
 
-    .process-card h3 {
-      font-family: "Playfair Display", Georgia, serif;
-      font-size: 27px;
-      font-weight: 400;
-      margin: 20px 0 10px;
+    .process-item h3 {
+      margin: 0 0 12px;
+      font-size: 25px;
     }
 
-    .process-card p {
-      color: var(--muted);
-      font-size: 14px;
-    }
-
-    /* =========================
-       PRICING
-    ========================= */
-
-    .pricing {
-      background: var(--green);
-      color: white;
-      border-bottom: none;
-    }
-
-    .pricing .section-label {
-      color: #d4b59f;
-    }
-
-    .pricing-grid {
-      display: grid;
-      grid-template-columns: .75fr 1.25fr;
-      gap: 90px;
-    }
-
-    .pricing-description {
-      color: #d6dfdb;
-      font-size: 16px;
-      max-width: 520px;
-    }
-
-    .pricing-table {
-      border-top: 1px solid rgba(255,255,255,.25);
-    }
-
-    .price-row {
-      display: grid;
-      grid-template-columns: 1fr 180px;
-      gap: 25px;
-      padding: 23px 0;
-      border-bottom: 1px solid rgba(255,255,255,.25);
-    }
-
-    .price-row strong {
-      font-weight: 500;
-    }
-
-    .price-row p {
-      margin: 5px 0 0;
-      color: #c5d0cc;
-      font-size: 13px;
-    }
-
-    .price {
-      text-align: right;
+    .process-item p {
+      margin: 0;
       font-size: 15px;
-      color: white;
     }
 
-    .pricing-note {
-      margin-top: 25px;
-      color: #c4d0cb;
-      font-size: 13px;
+    /* COST CARDS */
+
+    .cost-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      margin-top: 35px;
     }
 
-    /* =========================
-       CONTACT
-    ========================= */
+    .cost-card {
+      border: 1px solid var(--line);
+      padding: 28px 23px;
+      background: rgba(255, 253, 248, 0.38);
+    }
 
-    .contact {
-      padding: 125px 0;
+    .cost-card h3 {
+      margin: 0 0 14px;
+      font-size: 23px;
+    }
+
+    .cost {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 24px;
+      margin-bottom: 18px;
+      color: var(--accent);
+    }
+
+    .cost-card p {
+      font-size: 14px;
+      margin: 0;
+    }
+
+    /* CHECKLIST */
+
+    .checklist {
+      margin-top: 35px;
+      padding: 35px;
+      border: 1px solid var(--line);
+      background: rgba(255, 253, 248, 0.4);
+    }
+
+    .checklist li {
+      padding-left: 5px;
+      margin-bottom: 17px;
+    }
+
+    /* CTA */
+
+    .cta {
+      margin-top: 100px;
+      padding: 65px 45px;
+      background: #e9e1d5;
       text-align: center;
     }
 
-    .contact .section-title {
-      max-width: 900px;
-      margin-left: auto;
-      margin-right: auto;
+    .cta h2 {
+      margin: 0 auto 25px;
+      max-width: 700px;
     }
 
-    .contact-description {
-      max-width: 650px;
-      margin: 0 auto 35px;
-      color: var(--muted);
-      font-size: 17px;
+    .cta p {
+      max-width: 680px;
+      margin: 0 auto 30px;
     }
 
-    /* =========================
-       FOOTER
-    ========================= */
+    .cta-button {
+      display: inline-block;
+      border: 1px solid var(--ink);
+      padding: 13px 24px;
+      font-size: 14px;
+      transition: all 0.2s ease;
+    }
+
+    .cta-button:hover {
+      background: var(--ink);
+      color: var(--white);
+    }
+
+    /* FOOTER */
 
     footer {
-      background: var(--black);
-      color: white;
-      padding: 40px 0 25px;
+      border-top: 1px solid var(--line);
+      padding: 55px 30px;
     }
 
-    .footer-top {
+    .footer-inner {
+      max-width: 1180px;
+      margin: 0 auto;
       display: flex;
       justify-content: space-between;
       gap: 30px;
-      padding-bottom: 30px;
-      border-bottom: 1px solid rgba(255,255,255,.2);
     }
 
     .footer-brand {
-      font-family: "Playfair Display", Georgia, serif;
-      font-size: 27px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 24px;
     }
 
-    .footer-brand small {
-      display: block;
-      font-family: "DM Sans", Arial, sans-serif;
-      font-size: 9px;
-      letter-spacing: 2px;
-      color: #aaa;
-      text-transform: uppercase;
-    }
-
-    .footer-links {
-      display: flex;
-      gap: 25px;
-      flex-wrap: wrap;
-      align-items: center;
+    .footer-text {
+      color: #625b52;
       font-size: 13px;
-      color: #ddd;
+      margin-top: 7px;
     }
 
-    .footer-bottom {
-      padding-top: 22px;
-      display: flex;
-      justify-content: space-between;
-      gap: 20px;
-      color: #999;
-      font-size: 12px;
+    .back-top {
+      font-size: 13px;
     }
 
-    /* =========================
-       MOBILE
-    ========================= */
+    /* MOBILE */
 
-    @media (max-width: 850px) {
+    @media (max-width: 800px) {
 
-      .container {
-        width: min(var(--max), calc(100% - 32px));
+      .header-inner {
+        padding: 16px 20px;
       }
 
-      .nav {
-        min-height: 70px;
+      .brand {
+        min-width: auto;
+      }
+
+      .brand-name {
+        font-size: 21px;
       }
 
       .menu-button {
         display: block;
       }
 
-      .nav-links {
+      nav {
         display: none;
         position: absolute;
-        top: 70px;
+        top: 100%;
         left: 0;
         right: 0;
         background: var(--cream);
-        padding: 25px;
+        border-bottom: 1px solid var(--line);
         flex-direction: column;
         align-items: flex-start;
-        border-bottom: 1px solid var(--line);
+        padding: 20px;
+        gap: 18px;
       }
 
-      .nav-links.open {
+      nav.open {
         display: flex;
       }
 
-      .hero {
-        padding: 70px 0;
-      }
-
-      .hero-grid,
-      .about-grid,
-      .services-intro,
-      .advice-grid,
-      .pricing-grid {
-        grid-template-columns: 1fr;
-        gap: 45px;
+      .article {
+        padding: 70px 22px 70px;
       }
 
       h1 {
-        font-size: 60px;
-        letter-spacing: -3px;
+        font-size: 48px;
       }
 
-      .hero-image {
-        padding: 25px;
+      h2 {
+        font-size: 35px;
+        margin-top: 65px;
       }
 
-      section {
-        padding: 75px 0;
+      h3 {
+        font-size: 24px;
       }
 
-      .process-grid {
-        grid-template-columns: 1fr 1fr;
+      p {
+        font-size: 16px;
       }
 
-      .price-row {
+      .lead {
+        font-size: 18px;
+      }
+
+      .highlight {
+        padding: 22px;
+      }
+
+      .highlight p {
+        font-size: 22px;
+      }
+
+      .process {
         grid-template-columns: 1fr;
       }
 
-      .price {
-        text-align: left;
+      .cost-grid {
+        grid-template-columns: 1fr;
       }
 
-      .footer-top,
-      .footer-bottom {
+      .cta {
+        padding: 50px 24px;
+      }
+
+      .footer-inner {
         flex-direction: column;
-      }
-    }
-
-    @media (max-width: 550px) {
-
-      h1 {
-        font-size: 50px;
-      }
-
-      .process-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .service {
-        grid-template-columns: 45px 1fr 20px;
-        gap: 12px;
-      }
-
-      .service h3 {
-        font-size: 23px;
-      }
-
-      .contact {
-        padding: 85px 0;
       }
     }
   </style>
 </head>
 
-<body>
+<body id="top">
 
   <!-- =========================
        HEADER
   ========================== -->
 
   <header>
+    <div class="header-inner">
 
-    <div class="container nav">
-
-      <a href="#home" class="brand">
-        Deon Marek
-        <small>Book Marketing Expert</small>
+      <a href="#top" class="brand">
+        <div class="brand-name">DEON MAREK</div>
+        <span class="brand-subtitle">Book Marketing & Publicity</span>
       </a>
 
       <button
@@ -689,811 +573,833 @@
         ☰
       </button>
 
-      <nav class="nav-links" id="navLinks">
-
-        <a href="#about">About</a>
-
+      <nav id="mainNav">
+        <a href="#about">About me</a>
         <a href="#services">Services</a>
-
         <a href="#process">Process</a>
-
-        <a href="#pricing">Pricing</a>
-
-        <a href="#contact" class="nav-cta">Let's Talk</a>
-
+        <a href="#cost">Cost</a>
+        <a href="#contact">Contact</a>
       </nav>
 
     </div>
-
   </header>
 
 
+  <!-- =========================
+       MAIN CONTENT
+  ========================== -->
+
   <main>
 
-    <!-- =========================
-         HERO
-    ========================== -->
+    <article class="article">
 
-    <section class="hero" id="home">
+      <!-- INTRO -->
 
-      <div class="container hero-grid">
+      <section class="intro" id="about">
 
-        <div>
-
-          <div class="eyebrow">
-            Book Marketing • Author Visibility • Reader Discovery
-          </div>
-
-          <h1>
-            Good books deserve the right readers.
-          </h1>
-
-          <p class="hero-description">
-            I help authors strengthen the visibility, positioning, and
-            discoverability of their books through focused marketing
-            strategy and practical promotional support.
-          </p>
-
-          <div class="buttons">
-
-            <a href="#contact" class="button button-dark">
-              Start a Conversation
-            </a>
-
-            <a href="#services" class="button">
-              Explore Services
-            </a>
-
-          </div>
-
+        <div class="eyebrow">
+          Book Marketing • Author Visibility • Reader Discovery
         </div>
 
+        <h1>
+          Your book deserves<br>
+          to be discovered.
+        </h1>
 
-        <div class="hero-image">
+        <div class="intro-line"></div>
 
-          <img
-            src="deon-marek.jpg"
-            alt="Deon Marek, Book Marketing Expert"
-          >
+        <p class="lead">
+          A strong book can still struggle to find the right readers when
+          its positioning, discoverability, presentation, or promotional
+          strategy does not work together.
+        </p>
 
-          <div class="image-caption">
-            Deon Marek · Book Marketing Expert
-          </div>
+        <p>
+          I help authors turn strong books into stronger market opportunities
+          through focused visibility, retail optimization, reader discovery,
+          promotional assets, and practical marketing strategy.
+        </p>
 
-        </div>
+        <p>
+          The goal is not to make every author do everything. The goal is to
+          identify the opportunities around a book and choose the right
+          combination of actions to strengthen its visibility and presentation.
+        </p>
 
-      </div>
-
-    </section>
-
-
-    <!-- =========================
-         ABOUT
-    ========================== -->
-
-    <section id="about">
-
-      <div class="container about-grid">
-
-        <div>
-
-          <div class="section-label">
-            About
-          </div>
-
-          <h2 class="section-title">
-            Marketing starts with understanding the book.
-          </h2>
-
-        </div>
+      </section>
 
 
-        <div class="about-copy">
+      <!-- BOOK MARKETING COST INTRO -->
 
+      <section id="cost">
+
+        <h2>
+          How Much Does Book Marketing Actually Cost?
+        </h2>
+
+        <p>
+          If you have started looking into book marketing, you may have
+          noticed something immediately: pricing can vary considerably.
+        </p>
+
+        <p>
+          One service may focus on a single promotional activity while another
+          may involve retail optimization, reader outreach, promotional
+          assets, advertising support, campaign management, and longer-term
+          strategy.
+        </p>
+
+        <p>
+          So the useful question is not simply, "How much does book marketing
+          cost?"
+        </p>
+
+        <p>
+          The better question is:
+        </p>
+
+        <div class="highlight">
           <p>
-            A published book can have a strong story, valuable ideas, or
-            a compelling concept and still struggle to reach the readers
-            who would appreciate it most.
+            "What am I actually getting for my investment, and will it help
+            my book become easier for the right readers to discover?"
           </p>
+        </div>
 
-          <p>
-            My work focuses on the areas between publication and discovery:
-            how a book is positioned, how readers encounter it, how its
-            retail presence communicates its value, and where additional
-            promotional opportunities may exist.
-          </p>
+        <p>
+          The answer depends on the book, its current presentation, its
+          audience, its retail positioning, its goals, and the amount of
+          support required.
+        </p>
 
-          <p>
-            Rather than treating every title exactly the same, I look at
-            the individual book and build marketing support around its
-            genre, audience, goals, and current opportunities.
-          </p>
+      </section>
 
 
-          <div class="about-highlight">
+      <!-- SHORT ANSWER -->
 
-            <strong>
-              Strategy. Visibility. Discovery.
-            </strong>
+      <section>
 
-            <span>
-              A practical approach to helping authors create stronger
-              opportunities for their books.
-            </span>
+        <h2>
+          The Short Answer: What Should a Book Marketing Budget Cover?
+        </h2>
 
-          </div>
+        <p>
+          There is no single marketing budget that makes sense for every book.
+          A focused campaign might involve one specific area, while a broader
+          campaign can combine several activities.
+        </p>
+
+        <p>
+          For an author, the important thing is understanding exactly what
+          the investment is intended to accomplish.
+        </p>
+
+        <p>
+          Book marketing can involve:
+        </p>
+
+        <ul>
+          <li>Improving the way a book is positioned for its intended readers.</li>
+          <li>Strengthening Amazon metadata, keywords, and categories.</li>
+          <li>Improving reader discovery opportunities.</li>
+          <li>Creating promotional assets for social media and outreach.</li>
+          <li>Supporting reader-facing promotional campaigns.</li>
+          <li>Identifying relevant book clubs and reader communities.</li>
+          <li>Developing a practical promotional plan.</li>
+          <li>Reviewing opportunities for longer-term visibility.</li>
+        </ul>
+
+      </section>
+
+
+      <!-- REALISTIC BUDGET -->
+
+      <section>
+
+        <h2>
+          What Is a Realistic Book Marketing Budget?
+        </h2>
+
+        <p>
+          The appropriate investment depends on the scope of work rather than
+          simply choosing a number from a price list.
+        </p>
+
+        <p>
+          A small, clearly defined activity can require a very different
+          investment from a coordinated campaign involving multiple marketing
+          channels.
+        </p>
+
+        <p>
+          The following ranges are intended as a framework for understanding
+          the different levels of support available.
+        </p>
+
+        <div class="table-wrap">
+
+          <table>
+
+            <thead>
+              <tr>
+                <th>Type of Support</th>
+                <th>Indicative Cost</th>
+                <th>What It May Include</th>
+              </tr>
+            </thead>
+
+            <tbody>
+
+              <tr>
+                <td>
+                  DIY Guidance
+                </td>
+                <td>
+                  €50–€500
+                </td>
+                <td>
+                  Education, templates, checklists, marketing plans,
+                  software guidance, and practical resources.
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  Small Promotional Support
+                </td>
+                <td>
+                  €250–€1,500
+                </td>
+                <td>
+                  Limited outreach, newsletter promotion, basic advertising
+                  support, or a focused promotional activity.
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  Retail Optimization
+                </td>
+                <td>
+                  €1,000–€3,500
+                </td>
+                <td>
+                  Amazon optimization, keyword research, category research,
+                  book-page recommendations, and launch planning.
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  Targeted Book Marketing Campaign
+                </td>
+                <td>
+                  €3,500–€7,500
+                </td>
+                <td>
+                  Customized strategy, outreach, campaign management,
+                  content assets, retail support, and visibility planning.
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  Comprehensive Campaign
+                </td>
+                <td>
+                  €7,500–€15,000+
+                </td>
+                <td>
+                  Multiple coordinated strategies, sustained outreach,
+                  advertising, publicity, consulting, and asset development.
+                </td>
+              </tr>
+
+            </tbody>
+
+          </table>
 
         </div>
 
-      </div>
+        <p>
+          These are indicative ranges rather than automatic packages.
+          A specific proposal depends on the book, its goals, its current
+          position, and the work required.
+        </p>
 
-    </section>
-
-
-    <!-- =========================
-         SERVICES
-    ========================== -->
-
-    <section id="services">
-
-      <div class="container">
-
-        <div class="services-intro">
-
-          <div>
-
-            <div class="section-label">
-              Services
-            </div>
-
-            <h2 class="section-title">
-              Focused marketing support for your book.
-            </h2>
-
-          </div>
+      </section>
 
 
-          <div>
+      <!-- WHY COSTS VARY -->
 
-            <p class="lead">
-              From retail optimization to reader discovery and promotional
-              assets, each service is designed around a specific part of
-              the book marketing process.
+      <section>
+
+        <h2>
+          Why Do Book Marketing Costs Vary So Much?
+        </h2>
+
+        <p>
+          Two marketing professionals can both describe their work as
+          "book promotion" while providing completely different services.
+        </p>
+
+        <p>
+          One campaign might concentrate on Amazon visibility. Another might
+          focus on reader outreach, promotional assets, book clubs, or
+          publicity. A broader campaign may combine several of these areas.
+        </p>
+
+        <p>
+          That is why comparing prices without comparing deliverables can
+          create confusion.
+        </p>
+
+        <div class="numbered">
+
+          <div class="number-item">
+            <div class="number">01</div>
+            <h3>The Type of Marketing You Need</h3>
+
+            <p>
+              Different books require different approaches. A children's book
+              may require outreach to educators, libraries, parents, bookstores,
+              and relevant reading communities. A business book may need a
+              different discovery strategy.
             </p>
 
+            <p>
+              The more specialized the audience or strategy, the more focused
+              the work may need to become.
+            </p>
+          </div>
+
+
+          <div class="number-item">
+            <div class="number">02</div>
+            <h3>Whether the Work Is Customized or Standardized</h3>
+
+            <p>
+              Some lower-cost marketing services are built around standardized
+              processes. A clearly defined service can be useful when it
+              matches an author's needs.
+            </p>
+
+            <p>
+              The important thing is understanding what is actually included.
+            </p>
+
+            <ul>
+              <li>A defined promotional activity.</li>
+              <li>A limited outreach effort.</li>
+              <li>Basic promotional assets.</li>
+              <li>A focused advertising setup.</li>
+              <li>Newsletter or community promotion.</li>
+            </ul>
+          </div>
+
+
+          <div class="number-item">
+            <div class="number">03</div>
+            <h3>The Current Position of the Book</h3>
+
+            <p>
+              Marketing does not begin in exactly the same place for every
+              author. A book may already have strong presentation and simply
+              need better discovery, while another may require improvements
+              to positioning, metadata, or promotional materials first.
+            </p>
+          </div>
+
+
+          <div class="number-item">
+            <div class="number">04</div>
+            <h3>The Number of Activities Involved</h3>
+
+            <p>
+              A single focused service naturally requires less coordination
+              than a campaign involving retail optimization, reader outreach,
+              promotional assets, advertising, and campaign management.
+            </p>
+          </div>
+
+
+          <div class="number-item">
+            <div class="number">05</div>
+            <h3>The Length of the Campaign</h3>
+
+            <p>
+              Some authors need a one-time activity. Others need sustained
+              support around a launch or an ongoing visibility campaign.
+            </p>
+
+            <p>
+              The amount of planning, coordination, monitoring, and adjustment
+              can therefore change the overall scope.
+            </p>
+          </div>
+
+
+          <div class="number-item">
+            <div class="number">06</div>
+            <h3>The Audience You Are Trying to Reach</h3>
+
+            <p>
+              A marketing strategy becomes more useful when the intended
+              readership is clearly understood. Identifying where those
+              readers discover books can influence the promotional approach.
+            </p>
           </div>
 
         </div>
 
+      </section>
+
+
+      <!-- FIRST TIME AUTHOR -->
+
+      <section>
+
+        <h2>
+          How Much Should a First-Time Author Spend on Book Marketing?
+        </h2>
+
+        <p>
+          There is no universal answer.
+        </p>
+
+        <p>
+          First-time authors should consider their available budget, the
+          readiness of their book, and the specific goals they want to achieve
+          through promotion.
+        </p>
+
+        <p>
+          Before committing to a larger marketing campaign, consider the
+          following:
+        </p>
+
+        <div class="checklist">
+
+          <ul>
+            <li>Is the cover competitive within the genre?</li>
+            <li>Does the title and subtitle communicate the book clearly?</li>
+            <li>Is the book description compelling and properly positioned?</li>
+            <li>Are the Amazon categories relevant?</li>
+            <li>Are the keywords aligned with the intended readership?</li>
+            <li>Does the author biography support the book's positioning?</li>
+            <li>Is the pricing appropriate for the book and its market?</li>
+            <li>Is there a clear understanding of the intended readership?</li>
+            <li>Is the author website or book landing page ready?</li>
+            <li>Is there a plan for keeping readers connected after discovery?</li>
+          </ul>
+
+        </div>
+
+        <p>
+          Addressing these areas can help an author understand where marketing
+          support could make the greatest practical difference.
+        </p>
+
+      </section>
+
+
+      <!-- DEON'S APPROACH -->
+
+      <section>
+
+        <h2>
+          My Approach to Book Marketing
+        </h2>
+
+        <p>
+          No two books need exactly the same marketing plan.
+        </p>
+
+        <p>
+          I start with the book, its current presentation, its audience,
+          its retail presence, and the opportunity around it. Then I identify
+          what deserves attention first.
+        </p>
+
+        <div class="process" id="process">
+
+          <div class="process-item">
+            <div class="process-number">01</div>
+            <h3>Understand</h3>
+            <p>
+              We look at the book, its audience, current positioning, retail
+              presence, and goals.
+            </p>
+          </div>
+
+          <div class="process-item">
+            <div class="process-number">02</div>
+            <h3>Identify</h3>
+            <p>
+              We isolate the visibility gaps and promotional opportunities
+              that are most relevant.
+            </p>
+          </div>
+
+          <div class="process-item">
+            <div class="process-number">03</div>
+            <h3>Strengthen</h3>
+            <p>
+              We improve the selected areas through focused services,
+              promotional assets, and strategy.
+            </p>
+          </div>
+
+          <div class="process-item">
+            <div class="process-number">04</div>
+            <h3>Refine</h3>
+            <p>
+              We review what is working, adjust priorities, and keep the
+              marketing direction practical.
+            </p>
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- SERVICES -->
+
+      <section id="services">
+
+        <h2>
+          Services
+        </h2>
+
+        <p>
+          My services are designed to support the parts of book marketing
+          that matter most to a particular title. You can choose focused
+          support or combine several services into a broader campaign.
+        </p>
 
         <div class="service-list">
 
-
-          <!-- SERVICE 01 -->
-
-          <article class="service">
-
-            <div class="service-number">
-              01
-            </div>
-
-            <div>
-
-              <h3>
-                Listopia Placement
-              </h3>
-
-              <p>
-                Strategic support aimed at increasing a book's presence
-                in relevant Goodreads Listopia environments and helping
-                the title reach readers browsing lists related to its
-                genre, themes, and subject matter.
-              </p>
-
-            </div>
-
-            <div class="service-arrow">
-              ↗
-            </div>
-
-          </article>
-
-
-          <!-- SERVICE 02 -->
-
-          <article class="service">
-
-            <div class="service-number">
-              02
-            </div>
-
-            <div>
-
-              <h3>
-                Kindle Topping
-              </h3>
-
-              <p>
-                Promotional support focused on Kindle visibility
-                opportunities and improving the chances of a book
-                receiving attention within digital retail environments.
-              </p>
-
-            </div>
-
-            <div class="service-arrow">
-              ↗
-            </div>
-
-          </article>
-
-
-          <!-- SERVICE 03 -->
-
-          <article class="service">
-
-            <div class="service-number">
-              03
-            </div>
-
-            <div>
-
-              <h3>
-                Review Generation
-              </h3>
-
-              <p>
-                Reader-focused outreach strategies designed to encourage
-                authentic reader feedback and help authors build a stronger
-                base of genuine book discussion and reviews.
-              </p>
-
-            </div>
-
-            <div class="service-arrow">
-              ↗
-            </div>
-
-          </article>
-
-
-          <!-- SERVICE 04 -->
-
-          <article class="service">
-
-            <div class="service-number">
-              04
-            </div>
-
-            <div>
-
-              <h3>
-                Short Video Teaser
-              </h3>
-
-              <p>
-                Short-form promotional video concepts designed to give a
-                book a visual hook that can be used across social content,
-                promotional campaigns, and reader-facing channels.
-              </p>
-
-            </div>
-
-            <div class="service-arrow">
-              ↗
-            </div>
-
-          </article>
-
-
-          <!-- SERVICE 05 -->
-
-          <article class="service">
-
-            <div class="service-number">
-              05
-            </div>
-
-            <div>
-
-              <h3>
-                Amazon Metadata
-              </h3>
-
-              <p>
-                Review and improvement of important book-page information
-                including positioning, metadata elements, discoverability
-                signals, and presentation considerations.
-              </p>
-
-            </div>
-
-            <div class="service-arrow">
-              ↗
-            </div>
-
-          </article>
-
-
-          <!-- SERVICE 06 -->
-
-          <article class="service">
-
-            <div class="service-number">
-              06
-            </div>
-
-            <div>
-
-              <h3>
-                Book Club Promotion
-              </h3>
-
-              <p>
-                Targeted promotional planning for reaching relevant book
-                clubs, reading groups, and communities where the book's
-                subject and genre may naturally fit.
-              </p>
-
-            </div>
-
-            <div class="service-arrow">
-              ↗
-            </div>
-
-          </article>
-
-
-          <!-- SERVICE 07 -->
-
-          <article class="service">
-
-            <div class="service-number">
-              07
-            </div>
-
-            <div>
-
-              <h3>
-                Amazon Keyword & Category Optimization
-              </h3>
-
-              <p>
-                Research and refinement of Amazon keyword and category
-                opportunities to help a book align more closely with
-                relevant reader searches and retail categories.
-              </p>
-
-            </div>
-
-            <div class="service-arrow">
-              ↗
-            </div>
-
-          </article>
-
-
-          <!-- SERVICE 08 -->
-
-          <article class="service">
-
-            <div class="service-number">
-              08
-            </div>
-
-            <div>
-
-              <h3>
-                AI-Powered Recommendation Strategies
-              </h3>
-
-              <p>
-                AI-assisted research and recommendation strategies used
-                to explore potential audiences, reader interests,
-                promotional angles, and discovery opportunities.
-              </p>
-
-            </div>
-
-            <div class="service-arrow">
-              ↗
-            </div>
-
-          </article>
-
-
-          <!-- SERVICE 09 -->
-
-          <article class="service">
-
-            <div class="service-number">
-              09
-            </div>
-
-            <div>
-
-              <h3>
-                Marketing Advice
-              </h3>
-
-              <p>
-                One-to-one strategic guidance for authors who want clarity
-                on positioning, promotional priorities, audience discovery,
-                campaign planning, and what to focus on next.
-              </p>
-
-            </div>
-
-            <div class="service-arrow">
-              ↗
-            </div>
-
-          </article>
-
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- =========================
-         MARKETING ADVICE
-    ========================== -->
-
-    <section class="advice">
-
-      <div class="container advice-grid">
-
-        <div>
-
-          <div class="section-label">
-            Marketing Advice
+          <div class="service">
+            <div class="service-number">01</div>
+            <h3>Listopia Placement</h3>
+            <p>
+              Strategic support aimed at increasing a book's presence in
+              relevant Goodreads Listopia environments and reader-discovery
+              conversations.
+            </p>
           </div>
 
-          <h2 class="section-title">
-            Sometimes you don't need a full campaign. You need clarity.
-          </h2>
+          <div class="service">
+            <div class="service-number">02</div>
+            <h3>Kindle Topping</h3>
+            <p>
+              Promotional support designed around Kindle visibility
+              opportunities and the way readers encounter books in digital
+              retail environments.
+            </p>
+          </div>
 
-        </div>
+          <div class="service">
+            <div class="service-number">03</div>
+            <h3>Review Generation</h3>
+            <p>
+              Reader-outreach and review-support strategies focused on
+              encouraging authentic reader feedback without relying on
+              manufactured reviews.
+            </p>
+          </div>
 
+          <div class="service">
+            <div class="service-number">04</div>
+            <h3>Short Video Teaser</h3>
+            <p>
+              A concise promotional video concept designed to give a book
+              a visual hook for social posts, outreach, and reader attention.
+            </p>
+          </div>
 
-        <div class="advice-box">
+          <div class="service">
+            <div class="service-number">05</div>
+            <h3>Amazon Metadata Optimization</h3>
+            <p>
+              Book-page metadata support covering discoverability elements
+              such as positioning, keywords, categories, and presentation.
+            </p>
+          </div>
 
-          <p>
-            If you are unsure where your book's marketing should begin,
-            strategic advice can help identify the areas that deserve
-            attention before you invest in a larger campaign.
-          </p>
+          <div class="service">
+            <div class="service-number">06</div>
+            <h3>Book Club Promotion</h3>
+            <p>
+              Targeted promotional planning for reaching book clubs and reader
+              communities where the title's subject and genre fit.
+            </p>
+          </div>
 
-          <div class="advice-list">
+          <div class="service">
+            <div class="service-number">07</div>
+            <h3>Amazon Keyword & Category Optimization</h3>
+            <p>
+              Research and refinement intended to make a book's Amazon
+              positioning more relevant to the searches and categories that
+              fit it.
+            </p>
+          </div>
 
-            <div class="advice-item">
-              <strong>
-                Book positioning
-              </strong>
-              <span>→</span>
-            </div>
+          <div class="service">
+            <div class="service-number">08</div>
+            <h3>AI-Powered Recommendation Strategies</h3>
+            <p>
+              Modern discovery strategies using AI-assisted research and
+              recommendation thinking to uncover relevant audiences,
+              promotional angles, and discovery opportunities.
+            </p>
+          </div>
 
-            <div class="advice-item">
-              <strong>
-                Audience discovery
-              </strong>
-              <span>→</span>
-            </div>
-
-            <div class="advice-item">
-              <strong>
-                Promotional priorities
-              </strong>
-              <span>→</span>
-            </div>
-
-            <div class="advice-item">
-              <strong>
-                Campaign planning
-              </strong>
-              <span>→</span>
-            </div>
-
+          <div class="service">
+            <div class="service-number">09</div>
+            <h3>Marketing Advice</h3>
+            <p>
+              One-to-one strategic guidance covering positioning, promotional
+              priorities, campaign planning, audience discovery, and next steps.
+            </p>
           </div>
 
         </div>
 
-      </div>
-
-    </section>
+      </section>
 
 
-    <!-- =========================
-         PROCESS
-    ========================== -->
+      <!-- WHAT SUPPORT CAN LOOK LIKE -->
 
-    <section id="process">
+      <section>
 
-      <div class="container">
-
-        <div class="section-label">
-          Process
-        </div>
-
-        <h2 class="section-title">
-          A simple process built around your book.
+        <h2>
+          What Different Levels of Support Can Look Like
         </h2>
 
-        <div class="process-grid">
-
-
-          <div class="process-card">
-
-            <div class="process-number">
-              01
-            </div>
-
-            <h3>
-              Analyze
-            </h3>
-
-            <p>
-              Look at the book, its genre, audience, current presentation,
-              retail presence, and marketing objectives.
-            </p>
-
-          </div>
-
-
-          <div class="process-card">
-
-            <div class="process-number">
-              02
-            </div>
-
-            <h3>
-              Strategize
-            </h3>
-
-            <p>
-              Identify the visibility gaps and opportunities that are
-              most relevant to the book.
-            </p>
-
-          </div>
-
-
-          <div class="process-card">
-
-            <div class="process-number">
-              03
-            </div>
-
-            <h3>
-              Execute
-            </h3>
-
-            <p>
-              Put the selected marketing activities, promotional assets,
-              and strategies into action.
-            </p>
-
-          </div>
-
-
-          <div class="process-card">
-
-            <div class="process-number">
-              04
-            </div>
-
-            <h3>
-              Refine
-            </h3>
-
-            <p>
-              Review priorities and adjust the direction as new information
-              and opportunities emerge.
-            </p>
-
-          </div>
-
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- =========================
-         PRICING
-    ========================== -->
-
-    <section class="pricing" id="pricing">
-
-      <div class="container pricing-grid">
-
-        <div>
-
-          <div class="section-label">
-            Investment
-          </div>
-
-          <h2 class="section-title">
-            Flexible support for different stages.
-          </h2>
-
-          <p class="pricing-description">
-            The cost of book marketing depends on the scope, objectives,
-            deliverables, and level of support required. The ranges below
-            provide an initial guide.
-          </p>
-
-        </div>
-
-
-        <div>
-
-          <div class="pricing-table">
-
-
-            <div class="price-row">
-
-              <div>
-
-                <strong>
-                  DIY Education, Templates & Tools
-                </strong>
-
-                <p>
-                  Courses, checklists, marketing plans, software,
-                  templates, and basic resources.
-                </p>
-
-              </div>
-
-              <div class="price">
-                €50–€500
-              </div>
-
-            </div>
-
-
-            <div class="price-row">
-
-              <div>
-
-                <strong>
-                  Small Promotional Service
-                </strong>
-
-                <p>
-                  Limited outreach, newsletter promotion, basic advertising
-                  support, or a one-time activity.
-                </p>
-
-              </div>
-
-              <div class="price">
-                €250–€1,500
-              </div>
-
-            </div>
-
-
-            <div class="price-row">
-
-              <div>
-
-                <strong>
-                  Retail Optimization / Focused Strategy
-                </strong>
-
-                <p>
-                  Amazon optimization, keyword research, category research,
-                  book-page recommendations, and launch planning.
-                </p>
-
-              </div>
-
-              <div class="price">
-                €1,000–€3,500
-              </div>
-
-            </div>
-
-
-            <div class="price-row">
-
-              <div>
-
-                <strong>
-                  Targeted Book Marketing Campaign
-                </strong>
-
-                <p>
-                  Customized strategy, outreach, campaign management,
-                  content assets, retail support, and visibility planning.
-                </p>
-
-              </div>
-
-              <div class="price">
-                €3,500–€7,500
-              </div>
-
-            </div>
-
-
-            <div class="price-row">
-
-              <div>
-
-                <strong>
-                  Comprehensive Campaign / Long-Term Support
-                </strong>
-
-                <p>
-                  Multiple coordinated strategies, sustained outreach,
-                  advertising, publicity, consulting, and asset development.
-                </p>
-
-              </div>
-
-              <div class="price">
-                €7,500–€15,000+
-              </div>
-
-            </div>
-
-
-          </div>
-
-
-          <p class="pricing-note">
-            Final pricing is based on the specific scope of work and
-            requirements of each project.
-          </p>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- =========================
-         CONTACT
-    ========================== -->
-
-    <section class="contact" id="contact">
-
-      <div class="container">
-
-        <div class="section-label">
-          Let's Talk
-        </div>
-
-        <h2 class="section-title">
-          Your book already has a story. Let's build the marketing around it.
-        </h2>
-
-        <p class="contact-description">
-          If you are ready to explore what could be strengthened, start a
-          conversation and tell me about your book, its audience, and what
-          you want to accomplish.
+        <p>
+          The right level of support depends on what your book actually needs.
+          These examples are intended to show how different scopes can work.
         </p>
 
-        <div class="buttons">
+        <div class="cost-grid">
 
-          <a href="#" class="button button-dark" id="contactButton">
-            Start a Conversation →
-          </a>
+          <div class="cost-card">
+            <h3>Flexible Support</h3>
+            <div class="cost">€50–€500</div>
+            <p>
+              DIY education, templates, checklists, planning resources,
+              research guidance, and practical tools.
+            </p>
+          </div>
+
+          <div class="cost-card">
+            <h3>Focused Promotion</h3>
+            <div class="cost">€250–€1,500</div>
+            <p>
+              Limited outreach, newsletter promotion, basic advertising
+              support, or a one-time promotional activity.
+            </p>
+          </div>
+
+          <div class="cost-card">
+            <h3>Retail Strategy</h3>
+            <div class="cost">€1,000–€3,500</div>
+            <p>
+              Amazon optimization, keyword research, category research,
+              book-page recommendations, and launch planning.
+            </p>
+          </div>
+
+          <div class="cost-card">
+            <h3>Targeted Campaign</h3>
+            <div class="cost">€3,500–€7,500</div>
+            <p>
+              Customized strategy, outreach, campaign management, content
+              assets, retail support, and visibility planning.
+            </p>
+          </div>
+
+          <div class="cost-card">
+            <h3>Comprehensive Campaign</h3>
+            <div class="cost">€7,500–€15,000+</div>
+            <p>
+              Multiple coordinated strategies, sustained outreach,
+              advertising, publicity, consulting, and asset development.
+            </p>
+          </div>
+
+          <div class="cost-card">
+            <h3>Custom Proposal</h3>
+            <div class="cost">By scope</div>
+            <p>
+              A tailored combination of services based on your book,
+              audience, goals, current position, and required support.
+            </p>
+          </div>
 
         </div>
 
-      </div>
+      </section>
 
-    </section>
+
+      <!-- WHAT MAKES A CAMPAIGN USEFUL -->
+
+      <section>
+
+        <h2>
+          What Makes a Book Marketing Campaign Useful?
+        </h2>
+
+        <p>
+          Marketing is not simply about doing more promotional activities.
+          It is about making the right activities connect.
+        </p>
+
+        <p>
+          A campaign can be more practical when the book's positioning,
+          retail presentation, audience, promotional message, and discovery
+          opportunities are considered together.
+        </p>
+
+        <p>
+          That means asking questions such as:
+        </p>
+
+        <ul>
+          <li>Who is the book actually intended to reach?</li>
+          <li>Where do those readers discover books?</li>
+          <li>What makes the title relevant to them?</li>
+          <li>Does the retail page communicate that value clearly?</li>
+          <li>Which promotional channels make sense for the genre?</li>
+          <li>Which activities deserve priority?</li>
+          <li>What can realistically be measured or reviewed?</li>
+        </ul>
+
+      </section>
+
+
+      <!-- STRATEGY -->
+
+      <section>
+
+        <h2>
+          The Objective Is Visibility With Intention
+        </h2>
+
+        <p>
+          The goal is not simply to put a book in front of as many people
+          as possible.
+        </p>
+
+        <p>
+          The goal is to make the right readers more likely to find, notice,
+          understand, and consider the book.
+        </p>
+
+        <p>
+          That is why I focus on the relationship between positioning,
+          discoverability, retail presentation, promotional assets, and
+          reader-facing strategy.
+        </p>
+
+        <div class="highlight">
+          <p>
+            Stronger visibility starts with understanding where the book
+            currently stands and what deserves attention first.
+          </p>
+        </div>
+
+      </section>
+
+
+      <!-- ABOUT DEON -->
+
+      <section>
+
+        <h2>
+          About Deon Marek
+        </h2>
+
+        <p>
+          I work with authors who want a clearer path from
+          "my book is published" to "my book is being discovered."
+        </p>
+
+        <p>
+          My approach combines book positioning, retail-page thinking,
+          discoverability, promotional assets, and reader-facing strategy.
+        </p>
+
+        <p>
+          Rather than forcing every book into the same marketing formula,
+          I look at the title, its audience, its current presentation, and
+          the opportunities surrounding it.
+        </p>
+
+        <p>
+          From there, the work can be focused around the areas that appear
+          most relevant.
+        </p>
+
+      </section>
+
+
+      <!-- START -->
+
+      <section>
+
+        <h2>
+          Where Should You Start?
+        </h2>
+
+        <p>
+          You do not need to arrive with a complete marketing plan.
+        </p>
+
+        <p>
+          Start with the basics:
+        </p>
+
+        <ul>
+          <li>The title of your book.</li>
+          <li>The genre or category.</li>
+          <li>Your current retail link.</li>
+          <li>The readers you want to reach.</li>
+          <li>What you have already tried.</li>
+          <li>What you would most like to improve.</li>
+        </ul>
+
+        <p>
+          From there, the conversation can focus on the areas that make the
+          most sense for your book.
+        </p>
+
+      </section>
+
+
+      <!-- FINAL CTA -->
+
+      <section class="cta" id="contact">
+
+        <h2>
+          Let's Talk About What Could Change If More of the Right Readers Found Your Book.
+        </h2>
+
+        <p>
+          Tell me about your book, where it currently stands, and what you
+          want to accomplish. I can help outline the areas worth prioritizing
+          and the type of support that may make sense.
+        </p>
+
+        <a href="#top" class="cta-button">
+          Start a Conversation
+        </a>
+
+      </section>
+
+    </article>
 
   </main>
 
@@ -1504,100 +1410,54 @@
 
   <footer>
 
-    <div class="container">
+    <div class="footer-inner">
 
-      <div class="footer-top">
-
+      <div>
         <div class="footer-brand">
-          Deon Marek
-          <small>Book Marketing Expert</small>
+          DEON MAREK
         </div>
 
-        <div class="footer-links">
-
-          <a href="#about">
-            About
-          </a>
-
-          <a href="#services">
-            Services
-          </a>
-
-          <a href="#process">
-            Process
-          </a>
-
-          <a href="#pricing">
-            Pricing
-          </a>
-
-          <a href="#contact">
-            Let's Talk
-          </a>
-
+        <div class="footer-text">
+          Book Marketing & Publicity
         </div>
 
-      </div>
-
-
-      <div class="footer-bottom">
-
-        <span>
+        <div class="footer-text">
           © 2026 Deon Marek. All rights reserved.
-        </span>
-
-        <span>
-          Book Marketing • Visibility • Discovery
-        </span>
-
+        </div>
       </div>
+
+      <a href="#top" class="back-top">
+        Back to top ↑
+      </a>
 
     </div>
 
   </footer>
 
 
-  <script>
+  <!-- =========================
+       MOBILE MENU SCRIPT
+  ========================== -->
 
+  <script>
     const menuButton = document.getElementById("menuButton");
-    const navLinks = document.getElementById("navLinks");
+    const mainNav = document.getElementById("mainNav");
 
     menuButton.addEventListener("click", function () {
-
-      navLinks.classList.toggle("open");
-
-      const isOpen = navLinks.classList.contains("open");
+      const isOpen = mainNav.classList.toggle("open");
 
       menuButton.setAttribute("aria-expanded", isOpen);
 
       menuButton.textContent = isOpen ? "×" : "☰";
-
     });
 
-
-    document.querySelectorAll(".nav-links a").forEach(function(link) {
-
-      link.addEventListener("click", function() {
-
-        navLinks.classList.remove("open");
-
+    document.querySelectorAll("#mainNav a").forEach(function (link) {
+      link.addEventListener("click", function () {
+        mainNav.classList.remove("open");
         menuButton.setAttribute("aria-expanded", "false");
-
         menuButton.textContent = "☰";
-
       });
-
     });
-
-
-    document.getElementById("contactButton").addEventListener("click", function(event) {
-
-      event.preventDefault();
-
-      alert("Thank you for your interest. A contact form can be connected here.");
-
-    });
-
   </script>
 
 </body>
