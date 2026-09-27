@@ -8,20 +8,44 @@
 
     <meta
         name="description"
-        content="Deon Marek helps authors improve book visibility, reader discovery, retail positioning, and promotional strategy."
+        content="Deon Marek helps authors improve book visibility, reader discovery, retail positioning, and marketing strategy."
     >
 
     <style>
+
+        /* =====================================================
+           DEON MAREK BOOK MARKETING WEBSITE
+           ALL-IN-ONE INDEX.HTML
+        ===================================================== */
+
         :root {
-            --paper: #f5f2eb;
-            --paper-light: #faf8f3;
+            --cream: #f7f3ec;
+            --cream-light: #fbf9f5;
+
+            --about: #eee7dc;
+            --services: #e8efe9;
+            --approach: #f4efe6;
+            --pricing: #e9e6e0;
+            --guide: #faf8f3;
+            --contact: #ddd5c8;
+            --footer: #d4ccbf;
+
             --ink: #171717;
+            --dark: #242424;
             --muted: #57534e;
-            --line: #d8d1c5;
+
+            --line: #d3ccc0;
             --accent: #876b43;
+
             --white: #ffffff;
+
             --max-width: 1180px;
         }
+
+
+        /* =====================================================
+           RESET
+        ===================================================== */
 
         * {
             box-sizing: border-box;
@@ -33,9 +57,17 @@
 
         body {
             margin: 0;
-            background: var(--paper);
+            padding: 0;
+
+            background: var(--cream);
+
             color: var(--ink);
-            font-family: Arial, Helvetica, sans-serif;
+
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
             line-height: 1.7;
         }
 
@@ -54,29 +86,46 @@
             font: inherit;
         }
 
-        /* =========================
+
+        /* =====================================================
            HEADER
-        ========================== */
+        ===================================================== */
 
         .site-header {
             position: sticky;
             top: 0;
             z-index: 1000;
-            background: rgba(245, 242, 235, 0.97);
+
+            background: rgba(247, 243, 236, 0.97);
+
             border-bottom: 1px solid var(--line);
+
+            backdrop-filter: blur(10px);
         }
 
         .header-inner {
-            max-width: 1180px;
-            margin: 0 auto;
+            width: min(
+                var(--max-width),
+                calc(100% - 56px)
+            );
+
             min-height: 86px;
-            padding: 0 28px;
+
+            margin: 0 auto;
 
             display: flex;
+
             align-items: center;
+
             justify-content: space-between;
+
             gap: 30px;
         }
+
+
+        /* =====================================================
+           BRAND
+        ===================================================== */
 
         .brand {
             display: block;
@@ -84,30 +133,52 @@
         }
 
         .brand-name {
-            font-family: Georgia, "Times New Roman", serif;
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
             font-size: 25px;
+
             line-height: 1.1;
-            letter-spacing: 0.02em;
+
+            letter-spacing: 0.03em;
         }
 
         .brand-subtitle {
             margin-top: 7px;
+
             font-size: 10px;
+
             letter-spacing: 0.22em;
+
             text-transform: uppercase;
+
             color: var(--muted);
         }
 
+
+        /* =====================================================
+           NAVIGATION
+        ===================================================== */
+
         .nav {
             display: flex;
+
             align-items: center;
-            gap: 31px;
+
+            gap: 30px;
         }
 
         .nav a {
             font-size: 14px;
-            color: #292929;
-            transition: opacity 0.2s ease;
+
+            color: var(--dark);
+
+            transition:
+                opacity 0.2s ease,
+                background 0.2s ease,
+                color 0.2s ease;
         }
 
         .nav a:hover {
@@ -115,104 +186,211 @@
         }
 
         .nav-contact {
-            border: 1px solid var(--ink);
             padding: 9px 15px;
+
+            border: 1px solid var(--ink);
         }
+
+        .nav-contact:hover {
+            background: var(--ink);
+
+            color: var(--white);
+
+            opacity: 1 !important;
+        }
+
+
+        /* =====================================================
+           MOBILE MENU
+        ===================================================== */
 
         .menu-button {
             display: none;
-            background: transparent;
+
+            padding: 9px 13px;
+
             border: 1px solid var(--ink);
-            padding: 9px 12px;
+
+            background: transparent;
+
+            color: var(--ink);
+
             cursor: pointer;
         }
 
-        /* =========================
+
+        /* =====================================================
            GENERAL
-        ========================== */
+        ===================================================== */
 
         .container {
-            width: min(var(--max-width), calc(100% - 56px));
+            width: min(
+                var(--max-width),
+                calc(100% - 56px)
+            );
+
             margin: 0 auto;
         }
 
         .section {
             padding: 105px 0;
-            border-bottom: 1px solid var(--line);
-        }
 
-        .section-narrow {
-            max-width: 900px;
-            margin: 0 auto;
+            border-bottom: 1px solid var(--line);
         }
 
         .eyebrow {
             margin-bottom: 22px;
+
             font-size: 12px;
+
             letter-spacing: 0.22em;
+
             text-transform: uppercase;
+
             color: #4d4b47;
         }
+
+
+        /* =====================================================
+           TYPOGRAPHY
+        ===================================================== */
 
         h1,
         h2,
         h3 {
-            font-family: Georgia, "Times New Roman", serif;
+            margin-top: 0;
+
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
             font-weight: 400;
+
             color: var(--ink);
         }
 
         h1 {
-            margin: 0;
-            font-size: clamp(52px, 7vw, 92px);
+            margin-bottom: 0;
+
+            font-size: clamp(
+                52px,
+                7vw,
+                92px
+            );
+
             line-height: 0.98;
+
             letter-spacing: -0.045em;
         }
 
         h2 {
-            margin: 0 0 30px;
-            font-size: clamp(38px, 5vw, 58px);
+            margin-bottom: 30px;
+
+            font-size: clamp(
+                38px,
+                5vw,
+                58px
+            );
+
             line-height: 1.08;
+
             letter-spacing: -0.035em;
         }
 
         h3 {
-            margin: 0 0 14px;
+            margin-bottom: 14px;
+
             font-size: 27px;
+
             line-height: 1.2;
         }
 
         p {
-            margin: 0 0 22px;
-            color: var(--muted);
-            font-size: 17px;
-        }
+            margin-top: 0;
 
-        strong {
-            color: var(--ink);
+            margin-bottom: 22px;
+
+            color: var(--muted);
+
+            font-size: 17px;
         }
 
         .large-text {
             font-size: 21px;
+
             line-height: 1.65;
+
             color: #292929;
         }
 
-        /* =========================
+
+        /* =====================================================
+           BUTTONS
+        ===================================================== */
+
+        .button {
+            display: inline-flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            padding: 13px 20px;
+
+            border: 1px solid var(--ink);
+
+            font-size: 14px;
+
+            transition:
+                background 0.2s ease,
+                color 0.2s ease;
+        }
+
+        .button-primary {
+            background: var(--ink);
+
+            color: var(--white);
+        }
+
+        .button-primary:hover {
+            background: transparent;
+
+            color: var(--ink);
+        }
+
+        .button-secondary:hover {
+            background: var(--ink);
+
+            color: var(--white);
+        }
+
+
+        /* =====================================================
            HERO
-        ========================== */
+        ===================================================== */
 
         .hero {
             min-height: calc(100vh - 86px);
+
             padding: 105px 0 95px;
+
             display: flex;
+
             align-items: center;
+
+            background: var(--cream);
         }
 
         .hero-grid {
             display: grid;
-            grid-template-columns: 1.05fr 0.95fr;
+
+            grid-template-columns:
+                1.05fr
+                0.95fr;
+
             align-items: center;
+
             gap: 90px;
         }
 
@@ -222,95 +400,100 @@
 
         .hero-copy p {
             max-width: 640px;
+
             margin-top: 35px;
         }
 
         .hero-actions {
             display: flex;
+
             flex-wrap: wrap;
+
             gap: 14px;
+
             margin-top: 35px;
         }
 
-        .button {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            padding: 13px 20px;
-            border: 1px solid var(--ink);
-            font-size: 14px;
-            transition: all 0.2s ease;
-        }
 
-        .button-primary {
-            background: var(--ink);
-            color: var(--white);
-        }
-
-        .button-primary:hover {
-            background: transparent;
-            color: var(--ink);
-        }
-
-        .button-secondary:hover {
-            background: var(--ink);
-            color: var(--white);
-        }
-
-        /* =========================
+        /* =====================================================
            YOUR PHOTO
-        ========================== */
+        ===================================================== */
 
         .hero-photo-wrap {
             width: 100%;
+
             max-width: 510px;
+
             margin-left: auto;
-            background: #e8e1d9;
+
             padding: 42px;
+
+            background: #e4ddd3;
         }
 
         .hero-photo {
             width: 100%;
+
             aspect-ratio: 4 / 5;
+
             object-fit: cover;
+
             object-position: center top;
+
             background: #ddd;
         }
 
         .photo-caption {
             margin-top: 15px;
+
             font-size: 11px;
+
             letter-spacing: 0.14em;
+
             text-transform: uppercase;
+
             color: var(--muted);
         }
 
-        /* =========================
-           INTRO
-        ========================== */
 
-        .intro {
-            padding: 120px 0;
+        /* =====================================================
+           ABOUT
+        ===================================================== */
+
+        #about {
+            background: var(--about);
         }
 
         .intro-grid {
             display: grid;
-            grid-template-columns: 0.8fr 1.2fr;
+
+            grid-template-columns:
+                0.8fr
+                1.2fr;
+
             gap: 80px;
         }
 
         .intro-title {
             position: sticky;
+
             top: 125px;
+
             align-self: start;
         }
 
-        /* =========================
+
+        /* =====================================================
            SERVICES
-        ========================== */
+        ===================================================== */
+
+        #services {
+            background: var(--services);
+        }
 
         .services-intro {
             max-width: 780px;
+
             margin-bottom: 65px;
         }
 
@@ -320,35 +503,60 @@
 
         .service {
             display: grid;
-            grid-template-columns: 80px 1fr 1.3fr;
+
+            grid-template-columns:
+                80px
+                1fr
+                1.3fr;
+
             gap: 30px;
+
             padding: 34px 0;
+
             border-bottom: 1px solid var(--line);
         }
 
         .service-number {
-            font-family: Georgia, "Times New Roman", serif;
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
             font-size: 18px;
+
             color: var(--accent);
         }
 
         .service h3 {
+            margin-bottom: 0;
+
             font-size: 25px;
         }
 
         .service p {
-            margin: 0;
+            margin-bottom: 0;
+
             font-size: 16px;
         }
 
-        /* =========================
+
+        /* =====================================================
            APPROACH
-        ========================== */
+        ===================================================== */
+
+        #approach {
+            background: var(--approach);
+        }
 
         .approach-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+
+            grid-template-columns:
+                1fr
+                1fr;
+
             gap: 90px;
+
             align-items: start;
         }
 
@@ -358,30 +566,49 @@
 
         .process-item {
             display: grid;
-            grid-template-columns: 60px 1fr;
+
+            grid-template-columns:
+                60px
+                1fr;
+
             gap: 20px;
+
             padding: 28px 0;
+
             border-bottom: 1px solid var(--line);
         }
 
         .process-number {
-            font-family: Georgia, "Times New Roman", serif;
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
             color: var(--accent);
+
             font-size: 18px;
         }
 
         .process-item h3 {
+            margin-bottom: 10px;
+
             font-size: 23px;
         }
 
         .process-item p {
-            font-size: 16px;
             margin-bottom: 0;
+
+            font-size: 16px;
         }
 
-        /* =========================
+
+        /* =====================================================
            PRICING
-        ========================== */
+        ===================================================== */
+
+        #pricing {
+            background: var(--pricing);
+        }
 
         .pricing-intro {
             max-width: 850px;
@@ -389,23 +616,35 @@
 
         .pricing-table {
             width: 100%;
-            border-collapse: collapse;
+
             margin-top: 50px;
+
+            border-collapse: collapse;
+
             font-size: 15px;
         }
 
         .pricing-table th,
         .pricing-table td {
-            border: 1px solid var(--line);
             padding: 20px;
+
+            border: 1px solid var(--line);
+
             text-align: left;
+
             vertical-align: top;
         }
 
         .pricing-table th {
-            background: #ebe5da;
-            font-family: Georgia, "Times New Roman", serif;
+            background: #dedad2;
+
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
             font-size: 18px;
+
             font-weight: 400;
         }
 
@@ -413,17 +652,33 @@
             color: var(--muted);
         }
 
+        .pricing-table tr:hover td {
+            background: rgba(
+                255,
+                255,
+                255,
+                0.28
+            );
+        }
+
         .pricing-note {
             margin-top: 25px;
+
             font-size: 14px;
         }
 
-        /* =========================
-           ARTICLE / GUIDE
-        ========================== */
+
+        /* =====================================================
+           GUIDE
+        ===================================================== */
+
+        #guide {
+            background: var(--guide);
+        }
 
         .guide {
             max-width: 900px;
+
             margin: 0 auto;
         }
 
@@ -431,96 +686,121 @@
             margin-top: 70px;
         }
 
-        .guide h3 {
-            margin-top: 45px;
-        }
-
         .guide ul {
             padding-left: 25px;
+
             color: var(--muted);
         }
 
         .guide li {
             margin-bottom: 10px;
+
             font-size: 17px;
         }
 
         .quote {
             margin: 50px 0;
+
             padding: 25px 25px 25px 28px;
+
             border-left: 3px solid var(--accent);
+
+            background: rgba(
+                255,
+                255,
+                255,
+                0.4
+            );
         }
 
         .quote p {
             margin: 0;
-            font-family: Georgia, "Times New Roman", serif;
+
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
             font-size: 28px;
+
             line-height: 1.35;
+
             color: var(--ink);
         }
 
-        /* =========================
-           CONTACT
-        ========================== */
 
-        .contact-section {
-            background: #ebe5da;
+        /* =====================================================
+           CONTACT
+        ===================================================== */
+
+        #contact {
+            background: var(--contact);
         }
 
         .contact-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+
+            grid-template-columns:
+                1fr
+                1fr;
+
             gap: 80px;
+
             align-items: start;
         }
 
         .contact-box {
-            border-top: 1px solid var(--ink);
             padding-top: 25px;
+
+            border-top: 1px solid var(--ink);
         }
 
         .contact-box p {
             max-width: 550px;
         }
 
-        .contact-link {
-            display: inline-block;
-            margin-top: 10px;
-            font-family: Georgia, "Times New Roman", serif;
-            font-size: 25px;
-            border-bottom: 1px solid var(--ink);
-        }
 
-        /* =========================
+        /* =====================================================
            FOOTER
-        ========================== */
+        ===================================================== */
 
         footer {
             padding: 35px 0;
-            background: var(--paper);
+
+            background: var(--footer);
         }
 
         .footer-inner {
             display: flex;
-            justify-content: space-between;
+
             align-items: center;
+
+            justify-content: space-between;
+
             gap: 30px;
         }
 
         .footer-name {
-            font-family: Georgia, "Times New Roman", serif;
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
             font-size: 20px;
         }
 
         .footer-copy {
             margin: 0;
+
             font-size: 12px;
+
             color: var(--muted);
         }
 
-        /* =========================
-           MOBILE
-        ========================== */
+
+        /* =====================================================
+           TABLET
+        ===================================================== */
 
         @media (max-width: 850px) {
 
@@ -534,15 +814,25 @@
 
             .nav {
                 display: none;
+
                 position: absolute;
+
                 top: 76px;
+
                 left: 0;
+
                 right: 0;
+
                 padding: 20px 28px 28px;
-                background: var(--paper);
+
+                background: var(--cream);
+
                 border-bottom: 1px solid var(--line);
+
                 flex-direction: column;
+
                 align-items: flex-start;
+
                 gap: 20px;
             }
 
@@ -552,16 +842,19 @@
 
             .hero {
                 min-height: auto;
+
                 padding: 75px 0;
             }
 
             .hero-grid {
                 grid-template-columns: 1fr;
+
                 gap: 55px;
             }
 
             .hero-photo-wrap {
                 margin: 0;
+
                 max-width: 600px;
             }
 
@@ -569,6 +862,7 @@
             .approach-grid,
             .contact-grid {
                 grid-template-columns: 1fr;
+
                 gap: 50px;
             }
 
@@ -577,27 +871,36 @@
             }
 
             .service {
-                grid-template-columns: 50px 1fr;
+                grid-template-columns:
+                    50px
+                    1fr;
             }
 
             .service p {
                 grid-column: 2;
             }
 
-            .section,
-            .intro {
+            .section {
                 padding: 75px 0;
             }
         }
 
+
+        /* =====================================================
+           MOBILE
+        ===================================================== */
+
         @media (max-width: 560px) {
 
             .container {
-                width: min(100% - 34px, var(--max-width));
+                width: min(
+                    calc(100% - 34px),
+                    var(--max-width)
+                );
             }
 
             .header-inner {
-                padding: 0 17px;
+                width: calc(100% - 34px);
             }
 
             .brand-name {
@@ -621,7 +924,10 @@
             }
 
             .service {
-                grid-template-columns: 40px 1fr;
+                grid-template-columns:
+                    40px
+                    1fr;
+
                 gap: 15px;
             }
 
@@ -631,64 +937,109 @@
 
             .pricing-table {
                 display: block;
+
                 overflow-x: auto;
-                white-space: normal;
             }
 
             .footer-inner {
                 flex-direction: column;
+
                 align-items: flex-start;
             }
         }
+
     </style>
 </head>
 
+
 <body>
 
-    <!-- =========================
+
+    <!-- =====================================================
          HEADER
-    ========================== -->
+    ====================================================== -->
 
     <header class="site-header">
+
         <div class="header-inner">
 
             <a href="#home" class="brand">
-                <div class="brand-name">DEON MAREK</div>
-                <div class="brand-subtitle">BOOK MARKETING &amp; VISIBILITY</div>
+
+                <div class="brand-name">
+                    DEON MAREK
+                </div>
+
+                <div class="brand-subtitle">
+                    BOOK MARKETING &amp; VISIBILITY
+                </div>
+
             </a>
+
 
             <button
                 class="menu-button"
                 id="menuButton"
+                type="button"
                 aria-label="Open navigation"
                 aria-expanded="false"
             >
                 Menu
             </button>
 
+
             <nav class="nav" id="mainNav">
-                <a href="#about">About</a>
-                <a href="#services">Services</a>
-                <a href="#approach">Approach</a>
-                <a href="#pricing">Pricing</a>
-                <a href="#guide">Guide</a>
-                <a href="#contact" class="nav-contact">Let's Talk</a>
+
+                <a href="#about">
+                    About
+                </a>
+
+                <a href="#services">
+                    Services
+                </a>
+
+                <a href="#approach">
+                    Approach
+                </a>
+
+                <a href="#pricing">
+                    Pricing
+                </a>
+
+                <a href="#guide">
+                    Guide
+                </a>
+
+                <a
+                    href="#contact"
+                    class="nav-contact"
+                >
+                    Let's Talk
+                </a>
+
             </nav>
 
         </div>
+
     </header>
+
 
 
     <main>
 
-        <!-- =========================
-             HERO
-        ========================== -->
 
-        <section class="hero" id="home">
+        <!-- =====================================================
+             HERO
+        ====================================================== -->
+
+        <section
+            class="hero"
+            id="home"
+        >
+
             <div class="container">
 
                 <div class="hero-grid">
+
 
                     <div class="hero-copy">
 
@@ -696,31 +1047,45 @@
                             BOOK MARKETING · AUTHOR VISIBILITY · READER DISCOVERY
                         </div>
 
+
                         <h1>
                             Your book deserves to be discovered.
                         </h1>
 
+
                         <p class="large-text">
-                            I help authors turn strong books into stronger market
-                            opportunities through focused visibility, retail
-                            optimization, reader discovery, and practical
-                            marketing strategy.
+                            I help authors turn strong books into stronger
+                            market opportunities through focused visibility,
+                            retail optimization, reader discovery, and
+                            practical marketing strategy.
                         </p>
 
+
                         <div class="hero-actions">
-                            <a href="#services" class="button button-primary">
+
+                            <a
+                                href="#services"
+                                class="button button-primary"
+                            >
                                 Explore Services
                             </a>
 
-                            <a href="#contact" class="button button-secondary">
+
+                            <a
+                                href="#contact"
+                                class="button button-secondary"
+                            >
                                 Start a Conversation
                             </a>
+
                         </div>
 
                     </div>
 
 
-                    <!-- YOUR PICTURE -->
+
+                    <!-- YOUR IMAGE -->
+
                     <div class="hero-photo-wrap">
 
                         <img
@@ -738,35 +1103,49 @@
                 </div>
 
             </div>
+
         </section>
 
 
-        <!-- =========================
-             ABOUT
-        ========================== -->
 
-        <section class="section" id="about">
+        <!-- =====================================================
+             ABOUT
+        ====================================================== -->
+
+        <section
+            class="section"
+            id="about"
+        >
+
             <div class="container">
 
                 <div class="intro-grid">
 
+
                     <div class="intro-title">
-                        <div class="eyebrow">About</div>
+
+                        <div class="eyebrow">
+                            About
+                        </div>
 
                         <h2>
                             Marketing should begin with the book.
                         </h2>
+
                     </div>
+
 
 
                     <div>
 
                         <p class="large-text">
-                            Great marketing is not about making every author do
-                            everything. It is about identifying where a book has
-                            the strongest opportunity to be discovered and
-                            choosing the right combination of actions.
+                            Great marketing is not about making every author
+                            do everything. It is about identifying where a
+                            book has the strongest opportunity to be
+                            discovered and choosing the right combination of
+                            actions.
                         </p>
+
 
                         <p>
                             I work with authors who want a clearer path from
@@ -774,11 +1153,13 @@
                             discovered.”
                         </p>
 
+
                         <p>
                             My approach combines book positioning, retail-page
                             thinking, discoverability, promotional assets,
                             reader-facing strategy, and targeted outreach.
                         </p>
+
 
                         <p>
                             Every book has a different audience, genre,
@@ -791,23 +1172,34 @@
                 </div>
 
             </div>
+
         </section>
 
 
-        <!-- =========================
-             SERVICES
-        ========================== -->
 
-        <section class="section" id="services">
+        <!-- =====================================================
+             SERVICES
+        ====================================================== -->
+
+        <section
+            class="section"
+            id="services"
+        >
+
             <div class="container">
+
 
                 <div class="services-intro">
 
-                    <div class="eyebrow">Services</div>
+                    <div class="eyebrow">
+                        Services
+                    </div>
+
 
                     <h2>
                         Focused support for the parts of marketing that matter.
                     </h2>
+
 
                     <p>
                         Choose one focused service or combine several into a
@@ -818,31 +1210,49 @@
                 </div>
 
 
+
                 <div class="services-list">
 
+
+                    <!-- 01 -->
+
                     <div class="service">
-                        <div class="service-number">01</div>
+
+                        <div class="service-number">
+                            01
+                        </div>
 
                         <div>
-                            <h3>Listopia Placement</h3>
+                            <h3>
+                                Listopia Placement
+                            </h3>
                         </div>
 
                         <div>
                             <p>
-                                Strategic support aimed at increasing a book's
-                                presence in relevant Goodreads Listopia
+                                Strategic support aimed at increasing a
+                                book's presence in relevant Goodreads Listopia
                                 environments and reader-discovery
                                 conversations.
                             </p>
                         </div>
+
                     </div>
 
 
+
+                    <!-- 02 -->
+
                     <div class="service">
-                        <div class="service-number">02</div>
+
+                        <div class="service-number">
+                            02
+                        </div>
 
                         <div>
-                            <h3>Kindle Visibility</h3>
+                            <h3>
+                                Kindle Visibility
+                            </h3>
                         </div>
 
                         <div>
@@ -853,14 +1263,23 @@
                                 environments.
                             </p>
                         </div>
+
                     </div>
 
 
+
+                    <!-- 03 -->
+
                     <div class="service">
-                        <div class="service-number">03</div>
+
+                        <div class="service-number">
+                            03
+                        </div>
 
                         <div>
-                            <h3>Review Generation</h3>
+                            <h3>
+                                Review Generation
+                            </h3>
                         </div>
 
                         <div>
@@ -871,14 +1290,23 @@
                                 reviews.
                             </p>
                         </div>
+
                     </div>
 
 
+
+                    <!-- 04 -->
+
                     <div class="service">
-                        <div class="service-number">04</div>
+
+                        <div class="service-number">
+                            04
+                        </div>
 
                         <div>
-                            <h3>Short Video Teaser</h3>
+                            <h3>
+                                Short Video Teaser
+                            </h3>
                         </div>
 
                         <div>
@@ -888,14 +1316,23 @@
                                 outreach, and reader attention.
                             </p>
                         </div>
+
                     </div>
 
 
+
+                    <!-- 05 -->
+
                     <div class="service">
-                        <div class="service-number">05</div>
+
+                        <div class="service-number">
+                            05
+                        </div>
 
                         <div>
-                            <h3>Amazon Metadata</h3>
+                            <h3>
+                                Amazon Metadata
+                            </h3>
                         </div>
 
                         <div>
@@ -905,31 +1342,49 @@
                                 keywords, categories, and presentation.
                             </p>
                         </div>
+
                     </div>
 
 
+
+                    <!-- 06 -->
+
                     <div class="service">
-                        <div class="service-number">06</div>
+
+                        <div class="service-number">
+                            06
+                        </div>
 
                         <div>
-                            <h3>Book Club Promotion</h3>
+                            <h3>
+                                Book Club Promotion
+                            </h3>
                         </div>
 
                         <div>
                             <p>
-                                Targeted promotional planning for reaching book
-                                clubs and reader communities where the title's
-                                subject and genre fit.
+                                Targeted promotional planning for reaching
+                                book clubs and reader communities where the
+                                title's subject and genre fit.
                             </p>
                         </div>
+
                     </div>
 
 
+
+                    <!-- 07 -->
+
                     <div class="service">
-                        <div class="service-number">07</div>
+
+                        <div class="service-number">
+                            07
+                        </div>
 
                         <div>
-                            <h3>Amazon Keyword &amp; Category Optimization</h3>
+                            <h3>
+                                Amazon Keyword &amp; Category Optimization
+                            </h3>
                         </div>
 
                         <div>
@@ -939,14 +1394,23 @@
                                 searches and categories that fit the title.
                             </p>
                         </div>
+
                     </div>
 
 
+
+                    <!-- 08 -->
+
                     <div class="service">
-                        <div class="service-number">08</div>
+
+                        <div class="service-number">
+                            08
+                        </div>
 
                         <div>
-                            <h3>AI-Powered Recommendation Strategy</h3>
+                            <h3>
+                                AI-Powered Recommendation Strategies
+                            </h3>
                         </div>
 
                         <div>
@@ -957,14 +1421,23 @@
                                 opportunities.
                             </p>
                         </div>
+
                     </div>
 
 
+
+                    <!-- 09 -->
+
                     <div class="service">
-                        <div class="service-number">09</div>
+
+                        <div class="service-number">
+                            09
+                        </div>
 
                         <div>
-                            <h3>Marketing Advice</h3>
+                            <h3>
+                                Marketing Advice
+                            </h3>
                         </div>
 
                         <div>
@@ -974,35 +1447,49 @@
                                 planning, audience discovery, and next steps.
                             </p>
                         </div>
+
                     </div>
+
 
                 </div>
 
             </div>
+
         </section>
 
 
-        <!-- =========================
-             APPROACH
-        ========================== -->
 
-        <section class="section" id="approach">
+        <!-- =====================================================
+             APPROACH
+        ====================================================== -->
+
+        <section
+            class="section"
+            id="approach"
+        >
+
             <div class="container">
 
                 <div class="approach-grid">
 
+
                     <div>
 
-                        <div class="eyebrow">Approach</div>
+                        <div class="eyebrow">
+                            Approach
+                        </div>
+
 
                         <h2>
                             No two books need the same marketing plan.
                         </h2>
 
+
                         <p class="large-text">
                             I start with the book, its current presentation,
                             its audience, and the opportunity around it.
                         </p>
+
 
                         <p>
                             Then we decide what deserves attention first,
@@ -1013,87 +1500,136 @@
                     </div>
 
 
+
                     <div class="process-list">
 
+
                         <div class="process-item">
-                            <div class="process-number">01</div>
+
+                            <div class="process-number">
+                                01
+                            </div>
 
                             <div>
-                                <h3>Understand</h3>
+
+                                <h3>
+                                    Understand
+                                </h3>
 
                                 <p>
                                     We look at the book, its audience, current
                                     positioning, retail presence, and goals.
                                 </p>
+
                             </div>
+
                         </div>
 
 
+
                         <div class="process-item">
-                            <div class="process-number">02</div>
+
+                            <div class="process-number">
+                                02
+                            </div>
 
                             <div>
-                                <h3>Identify</h3>
+
+                                <h3>
+                                    Identify
+                                </h3>
 
                                 <p>
                                     We isolate the visibility gaps and
                                     promotional opportunities that are most
                                     relevant.
                                 </p>
+
                             </div>
+
                         </div>
 
 
+
                         <div class="process-item">
-                            <div class="process-number">03</div>
+
+                            <div class="process-number">
+                                03
+                            </div>
 
                             <div>
-                                <h3>Strengthen</h3>
+
+                                <h3>
+                                    Strengthen
+                                </h3>
 
                                 <p>
                                     We improve the selected areas through
                                     focused services, assets, and strategy.
                                 </p>
+
                             </div>
+
                         </div>
 
 
+
                         <div class="process-item">
-                            <div class="process-number">04</div>
+
+                            <div class="process-number">
+                                04
+                            </div>
 
                             <div>
-                                <h3>Refine</h3>
+
+                                <h3>
+                                    Refine
+                                </h3>
 
                                 <p>
                                     We review what is working, adjust
                                     priorities, and keep the marketing
                                     direction practical.
                                 </p>
+
                             </div>
+
                         </div>
+
 
                     </div>
 
                 </div>
 
             </div>
+
         </section>
 
 
-        <!-- =========================
-             PRICING
-        ========================== -->
 
-        <section class="section" id="pricing">
+        <!-- =====================================================
+             PRICING
+        ====================================================== -->
+
+        <section
+            class="section"
+            id="pricing"
+        >
+
             <div class="container">
+
 
                 <div class="pricing-intro">
 
-                    <div class="eyebrow">Pricing</div>
+                    <div class="eyebrow">
+                        Pricing
+                    </div>
+
 
                     <h2>
                         What does book marketing cost?
                     </h2>
+
 
                     <p class="large-text">
                         There is no single price that makes sense for every
@@ -1103,6 +1639,7 @@
                         broader campaign.
                     </p>
 
+
                     <p>
                         The ranges below are indicative. A specific proposal
                         depends on the book, goals, scope, and work required.
@@ -1111,143 +1648,210 @@
                 </div>
 
 
-                <table class="pricing-table">
 
-                    <thead>
-                        <tr>
-                            <th>Type of Support</th>
-                            <th>Indicative Cost</th>
-                            <th>What It May Include</th>
-                        </tr>
-                    </thead>
+                <div style="overflow-x:auto;">
 
-                    <tbody>
+                    <table class="pricing-table">
 
-                        <tr>
-                            <td>DIY / Guidance</td>
+                        <thead>
 
-                            <td>€50–€500</td>
+                            <tr>
 
-                            <td>
-                                Education, templates, checklists, marketing
-                                plans, software guidance, and basic resources.
-                            </td>
-                        </tr>
+                                <th>
+                                    Type of Support
+                                </th>
 
+                                <th>
+                                    Indicative Cost Range
+                                </th>
 
-                        <tr>
-                            <td>Small Promotional Service</td>
+                                <th>
+                                    What It May Include
+                                </th>
 
-                            <td>€250–€1,500</td>
+                            </tr>
 
-                            <td>
-                                Limited outreach, newsletter promotion, basic
-                                advertising support, or a one-time promotional
-                                activity.
-                            </td>
-                        </tr>
+                        </thead>
 
 
-                        <tr>
-                            <td>Retail Optimization / Focused Strategy</td>
-
-                            <td>€1,000–€3,500</td>
-
-                            <td>
-                                Amazon optimization, keyword research,
-                                category research, book-page recommendations,
-                                and launch planning.
-                            </td>
-                        </tr>
+                        <tbody>
 
 
-                        <tr>
-                            <td>Targeted Book Marketing Campaign</td>
+                            <tr>
 
-                            <td>€3,500–€7,500</td>
+                                <td>
+                                    DIY education, templates, or tools
+                                </td>
 
-                            <td>
-                                Customized strategy, outreach, campaign
-                                management, content assets, retail support,
-                                and visibility planning.
-                            </td>
-                        </tr>
+                                <td>
+                                    €50–€500
+                                </td>
+
+                                <td>
+                                    Courses, checklists, marketing plans,
+                                    software, and basic resources.
+                                </td>
+
+                            </tr>
 
 
-                        <tr>
-                            <td>Comprehensive / Long-Term Support</td>
+                            <tr>
 
-                            <td>€7,500–€15,000+</td>
+                                <td>
+                                    Small promotional service
+                                </td>
 
-                            <td>
-                                Multiple coordinated strategies, sustained
-                                outreach, advertising, publicity, consulting,
-                                and asset development.
-                            </td>
-                        </tr>
+                                <td>
+                                    €250–€1,500
+                                </td>
 
-                    </tbody>
+                                <td>
+                                    Limited outreach, newsletter promotion,
+                                    basic advertising support, or a one-time
+                                    activity.
+                                </td>
 
-                </table>
+                            </tr>
+
+
+                            <tr>
+
+                                <td>
+                                    Retail optimization or focused strategy
+                                </td>
+
+                                <td>
+                                    €1,000–€3,500
+                                </td>
+
+                                <td>
+                                    Amazon optimization, keyword research,
+                                    category research, book-page
+                                    recommendations, and launch planning.
+                                </td>
+
+                            </tr>
+
+
+                            <tr>
+
+                                <td>
+                                    Targeted book marketing campaign
+                                </td>
+
+                                <td>
+                                    €3,500–€7,500
+                                </td>
+
+                                <td>
+                                    Customized strategy, outreach, campaign
+                                    management, content assets, retail
+                                    support, and visibility planning.
+                                </td>
+
+                            </tr>
+
+
+                            <tr>
+
+                                <td>
+                                    Comprehensive campaign or long-term support
+                                </td>
+
+                                <td>
+                                    €7,500–€15,000+
+                                </td>
+
+                                <td>
+                                    Multiple coordinated strategies, sustained
+                                    outreach, advertising, publicity,
+                                    consulting, and asset development.
+                                </td>
+
+                            </tr>
+
+
+                        </tbody>
+
+                    </table>
+
+                </div>
 
 
                 <p class="pricing-note">
-                    Pricing is indicative and is not a fixed quotation. A
-                    specific proposal is based on the book, goals, scope, and
-                    work required.
+                    Pricing is indicative and is not a fixed quotation.
+                    A specific proposal is based on the book, goals,
+                    scope, and work required.
                 </p>
 
             </div>
+
         </section>
 
 
-        <!-- =========================
-             GUIDE
-        ========================== -->
 
-        <section class="section" id="guide">
+        <!-- =====================================================
+             GUIDE
+        ====================================================== -->
+
+        <section
+            class="section"
+            id="guide"
+        >
+
             <div class="container">
 
                 <article class="guide">
+
 
                     <div class="eyebrow">
                         Book Marketing Guide
                     </div>
 
+
                     <h2>
                         How to think about your book marketing investment.
                     </h2>
 
+
                     <p class="large-text">
-                        If you have started looking into book marketing, you
-                        may have noticed something quickly: pricing can vary
-                        dramatically.
+                        If you have started looking into book marketing,
+                        you may have noticed something quickly:
+                        pricing can vary dramatically.
                     </p>
 
-                    <p>
-                        One service may focus on Amazon visibility. Another
-                        may concentrate on reader outreach, promotional assets,
-                        book clubs, publicity, or campaign management.
-                    </p>
 
                     <p>
-                        That means comparing prices alone does not always tell
-                        you what you are actually receiving.
+                        One service may focus on Amazon visibility.
+                        Another may concentrate on reader outreach,
+                        promotional assets, book clubs, publicity,
+                        or campaign management.
                     </p>
+
+
+                    <p>
+                        That means comparing prices alone does not always
+                        tell you what you are actually receiving.
+                    </p>
+
 
 
                     <div class="quote">
+
                         <p>
-                            “The better question is what am I actually getting
-                            for my investment, and how does it support my
-                            book's discovery?”
+                            “The better question is what am I actually
+                            getting for my investment, and how does it
+                            support my book's discovery?”
                         </p>
+
                     </div>
+
 
 
                     <h2>
                         What should you look at before investing?
                     </h2>
+
 
                     <p>
                         Before committing to a larger marketing campaign,
@@ -1255,8 +1859,12 @@
                         presentation are ready.
                     </p>
 
+
                     <ul>
-                        <li>Is the cover competitive within the genre?</li>
+
+                        <li>
+                            Is the cover competitive within the genre?
+                        </li>
 
                         <li>
                             Does the title and subtitle clearly communicate
@@ -1278,8 +1886,8 @@
                         </li>
 
                         <li>
-                            Is the pricing appropriate for the book and its
-                            market?
+                            Is the pricing appropriate for the book and
+                            its market?
                         </li>
 
                         <li>
@@ -1292,21 +1900,25 @@
                         </li>
 
                         <li>
-                            Is there a way to stay connected with readers after
-                            they discover the book?
+                            Is there a way to stay connected with readers
+                            after they discover the book?
                         </li>
+
                     </ul>
+
 
 
                     <h2>
                         Why strategy matters.
                     </h2>
 
+
                     <p>
                         A book does not necessarily need every available
-                        marketing service. It needs the right combination of
-                        activities for its current situation.
+                        marketing service. It needs the right combination
+                        of activities for its current situation.
                     </p>
+
 
                     <p>
                         For one author, the priority may be improving retail
@@ -1314,66 +1926,89 @@
                         outreach, promotional assets, or a broader campaign.
                     </p>
 
+
                     <p>
-                        The starting point should always be the book and the
-                        audience it is trying to reach.
+                        The starting point should always be the book and
+                        the audience it is trying to reach.
                     </p>
+
 
                 </article>
 
             </div>
+
         </section>
 
 
-        <!-- =========================
-             CONTACT
-        ========================== -->
 
-        <section class="section contact-section" id="contact">
+        <!-- =====================================================
+             CONTACT
+        ====================================================== -->
+
+        <section
+            class="section"
+            id="contact"
+        >
+
             <div class="container">
 
                 <div class="contact-grid">
 
+
                     <div>
 
-                        <div class="eyebrow">Let's Talk</div>
+                        <div class="eyebrow">
+                            Let's Talk
+                        </div>
+
 
                         <h2>
-                            What could change if more of the right readers
-                            found your book?
+                            What could change if more of the right
+                            readers found your book?
                         </h2>
 
                     </div>
 
 
+
                     <div class="contact-box">
 
                         <p class="large-text">
-                            Tell me about your book, where it currently stands,
-                            and what you want to improve. We can identify the
-                            areas that appear most relevant and discuss what
-                            kind of support would make sense.
+                            Tell me about your book, where it currently
+                            stands, and what you want to improve.
+                            We can identify the areas that appear most
+                            relevant and discuss what kind of support
+                            would make sense.
                         </p>
 
-                        <a href="#contact" class="button button-primary">
+
+                        <a
+                            href="#home"
+                            class="button button-primary"
+                        >
                             Start a Conversation
                         </a>
 
                     </div>
 
+
                 </div>
 
             </div>
+
         </section>
+
 
     </main>
 
 
-    <!-- =========================
+
+    <!-- =====================================================
          FOOTER
-    ========================== -->
+    ====================================================== -->
 
     <footer>
+
         <div class="container">
 
             <div class="footer-inner">
@@ -1382,67 +2017,125 @@
                     Deon Marek · Book Marketing Expert
                 </div>
 
+
                 <p class="footer-copy">
-                    © <span id="year"></span> Deon Marek. All rights reserved.
+                    ©
+                    <span id="year"></span>
+                    Deon Marek. All rights reserved.
                 </p>
 
             </div>
 
         </div>
+
     </footer>
 
 
-    <!-- =========================
+
+    <!-- =====================================================
          JAVASCRIPT
-    ========================== -->
+    ====================================================== -->
 
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
 
-            const menuButton = document.getElementById("menuButton");
-            const mainNav = document.getElementById("mainNav");
+        document.addEventListener(
+            "DOMContentLoaded",
+            function () {
 
-            if (menuButton && mainNav) {
 
-                menuButton.addEventListener("click", function () {
+                /* MOBILE MENU */
 
-                    const isOpen = mainNav.classList.toggle("open");
-
-                    menuButton.setAttribute(
-                        "aria-expanded",
-                        String(isOpen)
+                const menuButton =
+                    document.getElementById(
+                        "menuButton"
                     );
 
-                    menuButton.textContent = isOpen ? "Close" : "Menu";
-                });
+                const mainNav =
+                    document.getElementById(
+                        "mainNav"
+                    );
 
 
-                mainNav.querySelectorAll("a").forEach(function (link) {
+                if (
+                    menuButton &&
+                    mainNav
+                ) {
 
-                    link.addEventListener("click", function () {
+                    menuButton.addEventListener(
+                        "click",
+                        function () {
 
-                        mainNav.classList.remove("open");
+                            const isOpen =
+                                mainNav.classList.toggle(
+                                    "open"
+                                );
 
-                        menuButton.setAttribute(
-                            "aria-expanded",
-                            "false"
+
+                            menuButton.setAttribute(
+                                "aria-expanded",
+                                String(isOpen)
+                            );
+
+
+                            menuButton.textContent =
+                                isOpen
+                                    ? "Close"
+                                    : "Menu";
+
+                        }
+                    );
+
+
+                    mainNav
+                        .querySelectorAll("a")
+                        .forEach(
+                            function (link) {
+
+                                link.addEventListener(
+                                    "click",
+                                    function () {
+
+                                        mainNav.classList.remove(
+                                            "open"
+                                        );
+
+
+                                        menuButton.setAttribute(
+                                            "aria-expanded",
+                                            "false"
+                                        );
+
+
+                                        menuButton.textContent =
+                                            "Menu";
+
+                                    }
+                                );
+
+                            }
                         );
 
-                        menuButton.textContent = "Menu";
-                    });
+                }
 
-                });
+
+                /* CURRENT YEAR */
+
+                const year =
+                    document.getElementById(
+                        "year"
+                    );
+
+
+                if (year) {
+
+                    year.textContent =
+                        new Date().getFullYear();
+
+                }
 
             }
+        );
 
-
-            const yearElement = document.getElementById("year");
-
-            if (yearElement) {
-                yearElement.textContent = new Date().getFullYear();
-            }
-
-        });
     </script>
 
 </body>
